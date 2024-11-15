@@ -30,7 +30,7 @@ def cargar_geojson_a_bd(ruta_geojson, database_url):
 
 
 # Ejemplo de uso
-DATABASE_URL = 'postgresql://postgres:elvin123@localhost:5432/apagones_db'
+DATABASE_URL = 'postgresql://postgres:EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI@postgres.railway.internal:5432/railway'
 ruta_geojson = 'C:/Users/elvin/Downloads/Practica/formulario_SDOeste/Proyecto_Final/geojson/sectores_unidos.geojson'
 
 cargar_geojson_a_bd(ruta_geojson, DATABASE_URL)
