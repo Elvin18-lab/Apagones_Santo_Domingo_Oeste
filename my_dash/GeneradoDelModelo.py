@@ -6,7 +6,7 @@ import names
 from esquemaDB import MedicionesSector
 
 # Configuración de la conexión a la base de datos
-engine = create_engine('postgresql://postgres:elvin123@localhost/apagones_db')
+engine = create_engine('postgresql://postgres:EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI@postgres.railway.internal:5432/railway')
 SessionLocal = sessionmaker(bind=engine)
 
 # Lista de sectores y estados de transformadores
