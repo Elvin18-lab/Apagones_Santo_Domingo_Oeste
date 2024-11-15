@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+/* Estilos del título */
+h1 {
+    color: #343a40; /* Color oscuro */
+    text-align: center;
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+}
+
+/* Estilo de los gráficos */
+.dash-graph {
+    margin: 20px 0;
+    border-radius: 16px; /* Bordes más redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease; /* Transición para el efecto de hover */
+}
+
+.dash-graph:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Estilo de los dropdowns */
+.dropdown {
+    margin: 10px 0;
+}
+
+/* Estilo de los botones */
+.btn {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto */
+    border: none;
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilos para el color del mapa */
+.mapboxgl-map {
+    border-radius: 16px; /* Bordes más redondeados */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento */
+}
+
+/* Estilo de la barra de color en los gráficos */
+.coloraxis-colorbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Animaciones para las transiciones de gráficos */
+.graph-transition {
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.5s ease-in-out; /* Transición de opacidad */
+}
+
+.graph-transition-enter {
+    opacity: 1; /* Se hace visible */
+}
+
+.graph-transition-leave {
+    opacity: 0; /* Se hace invisible */
+}
+
+/* Estilos de la tabla */
+.table-container {
+    margin: 20px 0; /* Espaciado general alrededor de la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    overflow: hidden; /* Para ocultar cualquier desbordamiento */
+}
+
+/* Estilos para las cabeceras de la tabla */
+.table-container .dash-table-container .dash-table-header {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    font-size: 1.2em; /* Fuente más grande para las cabeceras */
+    text-align: center; /* Centrar el texto en las cabeceras */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilos para las celdas de la tabla */
+.table-container .dash-table-container .dash-table-cell {
+    padding: 15px 20px; /* Relleno dentro de las celdas */
+    font-size: 1em; /* Tamaño de fuente para el contenido */
+    text-align: center; /* Centrar texto */
+    border-bottom: 1px solid #f1f1f1; /* Línea de separación suave entre filas */
+}
+
+/* Estilo para las filas alternas de la tabla */
+.table-container .dash-table-container .dash-table-row:nth-child(even) {
+    background-color: #f7f7f7; /* Color de fondo alternativo para filas pares */
+}
+
+/* Estilo de la tabla al pasar el mouse por encima de las filas */
+.table-container .dash-table-container .dash-table-row:hover {
+    background-color: #e9ecef; /* Color suave de hover */
+    cursor: pointer; /* Mostrar cursor de mano */
+}
+
+/* Estilos para las celdas cuando están en estado de foco (seleccionadas) */
+.table-container .dash-table-container .dash-table-cell.selected {
+    background-color: #cce5ff; /* Fondo azul claro cuando se selecciona una celda */
+}
+
+/* Estilos para las columnas de la tabla cuando se están ordenando */
+.table-container .dash-table-container .dash-table-header.sorting {
+    background-color: #0056b3; /* Fondo más oscuro para las cabeceras ordenadas */
+}
+
+/* Estilos para los botones de la tabla (si es que tienes botones en la tabla) */
+.table-container .dash-table-container .btn-table {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.table-container .dash-table-container .btn-table:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Paginación */
+.table-container .dash-table-container .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.table-container .dash-table-container .pagination button {
+    background-color: #007bff; /* Fondo azul */
+    color: white;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.table-container .dash-table-container .pagination button:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro */
+}
+
+.table-container .dash-table-container .pagination button:disabled {
+    background-color: #cccccc; /* Color gris para botones deshabilitados */
+    cursor: not-allowed;
+}
+
+

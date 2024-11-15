@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Apagón</title>
+    <link rel="stylesheet" href="/static/formulario-apagones.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reporte de Apagón</h1>
+        <form id="reporteForm">
+            <!-- Información Básica -->
+            <div class="section">
+                <h2 class="section-title">Información Básica</h2>
+                <div class="form-group">
+                    <label for="nombre_completo">Nombre completo:</label>
+                    <input type="text" id="nombre_completo" name="nombre_completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo_electronico">Correo electrónico:</label>
+                    <input type="email" id="correo_electronico" name="correo_electronico" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha_apagon">Fecha del apagón:</label>
+                    <input type="date" id="fecha_apagon" name="fecha_apagon" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora_inicio">Hora de inicio del apagón:</label>
+                    <input type="time" id="hora_inicio" name="hora_inicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora_fin">Hora de fin del apagón:</label>
+                    <input type="time" id="hora_fin" name="hora_fin" required>
+                </div>
+                <div class="form-group">
+                    <label for="sector">Sector:</label>
+                    <select id="sector" name="sector" required>
+                        <option value="" disabled selected>Selecciona un sector</option>
+                        <option value="Zona Industrial de Herrera">Zona Industrial de Herrera</option>
+                        <option value="Km. 12 Av. Independencia / Calle Isabel Aguiar">Km. 12 Av. Independencia / Calle Isabel Aguiar</option>
+                        <option value="Ensanche Altagracia">Ensanche Altagracia</option>
+                        <option value="Hato Nuevo">Hato Nuevo</option>
+                        <option value="Bayona">Bayona</option>
+                        <option value="El Abanico">El Abanico</option>
+                        <option value="El Libertador">El Libertador</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Las Palmas">Las Palmas</option>
+                        <option value="Enriquillo">Enriquillo</option>
+                        <option value="Manoguayabo">Manoguayabo</option>
+                        <option value="Km. 14">Km. 14</option>
+                        <option value="La Venta">La Venta</option>
+                        <option value="Las Caobas">Las Caobas</option>
+                        <option value="Km. 13 Carretera Sánchez / Av. Independencia">Km. 13 Carretera Sánchez / Av. Independencia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="circuito">Circuito:</label>
+                    <input type="text" id="circuito" name="circuito" placeholder="Ej: CSAT-101" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="apagon_programado" name="apagon_programado">
+                    <label for="apagon_programado">¿Fue un apagón programado?</label>
+                </div>
+            </div>
+
+            <!-- Consumo de Energía -->
+            <div class="section">
+                <h2 class="section-title">Consumo de Energía</h2>
+                <div class="form-group">
+                    <label for="tipo_tarifa">Tipo de tarifa:</label>
+                    <select id="tipo_tarifa" name="tipo_tarifa" required>
+                        <option value="24 horas">24 horas</option>
+                        <option value="18 horas">18 horas</option>
+                        <option value="12 horas">12 horas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rango_consumo">Rango de consumo mensual:</label>
+                    <select id="rango_consumo" name="rango_consumo" required>
+                        <option value="Bajo: 0-200kWh">Bajo: 0-200kWh</option>
+                        <option value="Medio: 201-700kWh">Medio: 201-700kWh</option>
+                        <option value="Alto: >700kWh">Alto: >700kWh</option>
+                    </select>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="tiene_inversor" name="tiene_inversor">
+                    <label for="tiene_inversor">¿Tiene inversor?</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="tiene_medidor_inteligente" name="tiene_medidor_inteligente">
+                    <label for="tiene_medidor_inteligente">¿Tiene medidor inteligente?</label>
+                </div>
+            </div>
+
+            <!-- Estado de la Infraestructura -->
+            <div class="section">
+                <h2 class="section-title">Estado de la Infraestructura Eléctrica</h2>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="postes_mal_estado" name="postes_mal_estado">
+                    <label for="postes_mal_estado">¿Hay postes en mal estado?</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="cables_colgando" name="cables_colgando">
+                    <label for="cables_colgando">¿Hay cables colgando?</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="transformadores_danados" name="transformadores_danados">
+                    <label for="transformadores_danados">¿Hay transformadores visiblemente dañados?</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="conexiones_irregulares" name="conexiones_irregulares">
+                    <label for="conexiones_irregulares">¿Hay conexiones irregulares visibles?</label>
+                </div>
+            </div>
+
+            <!-- Información Ambiental y Contexto -->
+            <div class="section">
+                <h2 class="section-title">Información Ambiental y Contexto</h2>
+                <div class="form-group">
+                    <label for="clima">Clima:</label>
+                    <select id="clima" name="clima" required>
+                        <option value="Soleado">Soleado</option>
+                        <option value="Nublado">Nublado</option>
+                        <option value="Lluvia">Lluvia</option>
+                        <option value="Tormenta">Tormenta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo_zona">Tipo de zona:</label>
+                    <select id="tipo_zona" name="tipo_zona" required>
+                        <option value="Residencial">Residencial</option>
+                        <option value="Comercial">Comercial</option>
+                        <option value="Industrial">Industrial</option>
+                        <option value="Mixta">Mixta</option>
+                    </select>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="zona_alto_consumo" name="zona_alto_consumo">
+                    <label for="zona_alto_consumo">¿Es una zona de alto consumo comercial?</label>
+                </div>
+            </div>
+
+            <button type="submit">Enviar Reporte</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script>
+        document.getElementById('reporteForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+        
+            // Convertir checkboxes a booleanos
+            ['apagon_programado', 'tiene_inversor', 'tiene_medidor_inteligente', 
+             'postes_mal_estado', 'cables_colgando', 'transformadores_danados', 
+             'conexiones_irregulares', 'zona_alto_consumo'].forEach(field => {
+                data[field] = formData.has(field);
+            });
+        
+            try {
+                const response = await fetch('http://127.0.0.1:8000/enviar/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    window.location.href = '/validacion';
+                } else {
+                    const responseData = await response.json();
+                    alert(responseData.detail || 'Error al enviar el reporte.');
+                }
+            } catch (error) {
+                alert('Error de conexión. Por favor, verifique su conexión a internet.');
+            }
+        });
+        </script>
+        
+</body>
+</html>
+
