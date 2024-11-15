@@ -12,7 +12,7 @@ import numpy as np
 from datetime import datetime, timedelta
 
 # Configuración de la base de datos
-engine = create_engine('postgresql://postgres:elvin123@localhost/apagones_db')
+engine = create_engine('postgresql://postgres:EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI@postgres.railway.internal:5432/railway')
 Base = declarative_base()
 SessionLocal = sessionmaker(bind=engine)
 
