@@ -20,7 +20,7 @@ class Sector(Base):
         return f"<Sector(nombre={self.nombre}, latitud={self.latitud}, longitud={self.longitud})>"
 
 # Define la URL de la base de datos
-DATABASE_URL = 'postgresql://postgres:elvin123@localhost:5432/apagones_db'
+DATABASE_URL = 'postgresql://postgres:EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI@postgres.railway.internal:5432/railway'
 
 # Crear el motor
 engine = create_engine(DATABASE_URL)
