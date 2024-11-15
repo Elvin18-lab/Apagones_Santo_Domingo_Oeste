@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from sectorDB import Sector  # Asegúrate de que esta clase está correctamente configurada
 
 # Configura la conexión a la base de datos
-db_url = "postgresql://postgres:elvin123@localhost:5432/apagones_db"
+db_url = "postgresql://postgres:EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI@postgres.railway.internal:5432/railway"
 engine = create_engine(db_url)
 Session = sessionmaker(bind=engine)
 session = Session()
