@@ -148,10 +148,10 @@ def train_and_save_model(df):
 def get_data_from_db():
     try:
         conn = psycopg2.connect(
-        host="localhost",
-        database="apagones_db",
+        host="postgres.railway.internal",
+        database="railway",
         user="postgres",
-        password="elvin123"
+        password="EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI"
         )
         query = """
         SELECT
