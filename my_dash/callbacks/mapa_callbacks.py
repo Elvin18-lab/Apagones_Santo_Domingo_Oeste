@@ -13,7 +13,7 @@ from datetime import timedelta
 cache = TTLCache(maxsize=100, ttl=7200)  # 7200 segundos = 2 horas
 
 # Conectar a la base de datos PostgreSQL
-engine = create_engine('postgresql://postgres:elvin123@localhost:5432/apagones_db')
+engine = create_engine('postgresql://postgres:EgRjEpfPLsdgCTCQRAgyfSaIdBatsHQI@postgres.railway.internal:5432/railway')
 
 @cached(cache)
 def cargar_datos(fecha=None):
